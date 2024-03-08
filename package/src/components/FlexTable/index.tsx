@@ -6,7 +6,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "./Icons";
 type RowColumnData = ComponentProps<typeof FlexTableRow>["columnsData"][string];
 
 export type FlexTableItemColumn = {
-  name: string;
+  key: string;
   header: string;
   sortable?: boolean;
 } & Partial<RowColumnData>;
@@ -40,7 +40,7 @@ function FlexTable(props: FlexTableProps) {
     const data: ComponentProps<typeof FlexTableRow>["columnsData"] = {};
 
     props.columns.forEach((column) => {
-      data[column.name] = {
+      data[column.key] = {
         template: column.template || null,
         style: column.style || {},
         isEditable: column.isEditable || false,
@@ -53,7 +53,7 @@ function FlexTable(props: FlexTableProps) {
   }, [props.columns]);
 
   const columnsOrder = useMemo(
-    () => props.columns.map((column) => column.name),
+    () => props.columns.map((column) => column.key),
     [props.columns],
   );
 
@@ -63,7 +63,7 @@ function FlexTable(props: FlexTableProps) {
     const direction = currentSort[1] === "asc" ? 1 : -1;
     const column = currentSort[0];
     const columnType =
-      props.columns.find((c) => c.name === column)?.type || "string";
+      props.columns.find((c) => c.key === column)?.type || "string";
 
     return [...props.data].sort((a: any, b: any) => {
       if (columnType === "string") {

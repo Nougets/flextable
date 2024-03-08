@@ -11,48 +11,48 @@ export const data: data = {
   columns: [
     {
       header: "Id",
-      name: "id",
+      key: "id",
       isEditable: false,
       type: "number",
     },
     {
       header: "Name",
-      name: "name",
+      key: "name",
       isEditable: false,
     },
     {
       header: "Email",
-      name: "email",
+      key: "email",
       isEditable: false,
     },
   ],
   columnsSortable: [
     {
       header: "Id",
-      name: "id",
+      key: "id",
       isEditable: false,
       type: "number",
       sortable: true,
     },
     {
       header: "Name",
-      name: "name",
+      key: "name",
       isEditable: false,
-      type: "string",
+      type: "text",
       sortable: true,
     },
     {
       header: "Email",
-      name: "email",
+      key: "email",
       isEditable: false,
-      type: "string",
+      type: "text",
       sortable: true,
     },
   ],
   columnsEditable: [
     {
       header: "Id",
-      name: "id",
+      key: "id",
       isEditable: true,
       onChange(row: object, value: string) {
         console.log(
@@ -71,7 +71,7 @@ export const data: data = {
     },
     {
       header: "Name",
-      name: "name",
+      key: "name",
       isEditable: true,
       onChange(row: object, value: string) {
         console.log(
@@ -90,7 +90,7 @@ export const data: data = {
     },
     {
       header: "Email",
-      name: "email",
+      key: "email",
       isEditable: true,
       onChange(row: object, value: string) {
         console.log(
