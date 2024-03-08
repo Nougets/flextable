@@ -38,8 +38,8 @@ Here's how to quickly get started with FlexTable in your React application:
 
   ```typescript
   const columns = [
-    { title: "Name", dataIndex: "name", key: "name" },
-    { title: "Age", dataIndex: "age", key: "age" },
+    { header: "Name", key: "name" },
+    { header: "Age", key: "age" },
     // Add more columns as needed
   ];
 
@@ -50,13 +50,11 @@ Here's how to quickly get started with FlexTable in your React application:
   ];
   ```
 
-````
-
 - Render the FlexTable component:
 
   ```typescript
   <FlexTable columns={columns} data={data} />
-````
+  ```
 
 ## Documentation
 
