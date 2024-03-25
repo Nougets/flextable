@@ -6,6 +6,7 @@
   "author": "Nouget",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
+  "repository": "git@github.com:Nougets/flextable.git",
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
