@@ -1,68 +1,6 @@
 # Flextable
 
-FlexTable is a lightweight, flexible table component designed for React applications. It simplifies the process of displaying tabular data with customizable features and responsive design. Whether you're dealing with simple or complex datasets, FlexTable provides an intuitive API to display data efficiently.
-
-## Features
-
-- **Customizable Columns:** Define your table columns with ease, including headers, sorting, and rendering functions.
-- **Responsive Design:** Adapts to various screen sizes for optimal viewing on any device.
-- **Sorting & Filtering:** Built-in sorting and filtering capabilities to manage your data effectively.
-- **Easy Integration:** Seamlessly integrates with your React projects, supporting both functional and class components.
-- **Performance Optimized:** Designed with performance in mind to handle large datasets without compromising speed.
-
-## Installation
-
-Install FlexTable using npm:
-
-```bash
-npm install @nougets/flextable
-```
-
-Or using yarn:
-
-```bash
-yarn add @nougets/flextable
-```
-
-## Quick Start
-
-Here's how to quickly get started with FlexTable in your React application:
-
-- Import FlexTable in your component:
-
-  ```typescript
-  import { FlexTable } from "@nougets/flextable";
-  ```
-
-- Define your columns and data:
-
-  ```typescript
-  const columns = [
-    { header: "Name", key: "name" },
-    { header: "Age", key: "age" },
-    // Add more columns as needed
-  ];
-
-  const data = [
-    { name: "John Doe", age: 30 },
-    { name: "Jane Doe", age: 25 },
-    // Add more data as needed
-  ];
-  ```
-
-- Render the FlexTable component:
-
-  ```typescript
-  <FlexTable columns={columns} data={data} />
-  ```
-
-## Documentation
-
-For a more detailed guide on FlexTable's API, including how to customize columns, implement sorting and filtering, and more, check out our documentation.
-
-## Examples
-
-Explore our examples to see FlexTable in action, showcasing various use cases and customization options.
+Repo containing all the code for the FlexTable project.
 
 ## Contributing
 

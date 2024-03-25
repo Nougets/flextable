@@ -1,30 +1,77 @@
-# React + TypeScript + Vite
+# Flextable
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FlexTable is a lightweight, flexible table component designed for React applications. It simplifies the process of displaying tabular data with customizable features and responsive design. Whether you're dealing with simple or complex datasets, FlexTable provides an intuitive API to display data efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Customizable Columns:** Define your table columns with ease, including headers, sorting, and rendering functions.
+- **Responsive Design:** Adapts to various screen sizes for optimal viewing on any device.
+- **Sorting & Filtering:** Built-in sorting and filtering capabilities to manage your data effectively.
+- **Easy Integration:** Seamlessly integrates with your React projects, supporting both functional and class components.
+- **Performance Optimized:** Designed with performance in mind to handle large datasets without compromising speed.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Install FlexTable using npm:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install @nougets/flextable
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Or using yarn:
+
+```bash
+yarn add @nougets/flextable
+```
+
+## Quick Start
+
+Here's how to quickly get started with FlexTable in your React application:
+
+- Import FlexTable in your component:
+
+  ```typescript
+  import { FlexTable } from "@nougets/flextable";
+  ```
+
+- Define your columns and data:
+
+  ```typescript
+  const columns = [
+    { header: "Name", key: "name" },
+    { header: "Age", key: "age" },
+    // Add more columns as needed
+  ];
+
+  const data = [
+    { name: "John Doe", age: 30 },
+    { name: "Jane Doe", age: 25 },
+    // Add more data as needed
+  ];
+  ```
+
+- Render the FlexTable component:
+
+  ```typescript
+  <FlexTable columns={columns} data={data} />
+  ```
+
+## Documentation
+
+For a more detailed guide on FlexTable's API, including how to customize columns, implement sorting and filtering, and more, check out our documentation.
+
+## Examples
+
+Explore our examples to see FlexTable in action, showcasing various use cases and customization options.
+
+## Contributing
+
+We welcome contributions to FlexTable! If you're interested in helping improve the project, check out our contributing guidelines.
+
+## License
+
+FlexTable is open-sourced software licensed under the MIT license.
+
+## Support
+
+If you have any questions or issues, please open an issue on our GitHub repository, and we'll do our best to assist you.
