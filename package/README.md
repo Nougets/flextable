@@ -28,6 +28,14 @@ yarn add @nougets/flextable
 
 Here's how to quickly get started with FlexTable in your React application:
 
+- Add the basic styles to your project:
+
+  In your main file (e.g., `index.tsx`), add the following import:
+
+  ```typescript
+  import "@nouget/flextable/dist/assets/style.css";
+  ```
+
 - Import FlexTable in your component:
 
   ```typescript
