@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { data } from "./data";
 
-import FlexTable from "./index";
+import { FlexTable } from "./index";
 
 const meta = {
   title: "Components/FlexTable",

@@ -27,15 +27,15 @@ function FlexTableHeader(props: FlexTableHeaderProps) {
             key={column.key}
           >
             <span
-              className={`relative select-none ${column.sortable ? "cursor-pointer" : ""}`}
+              className={`relative select-none ${column.isSortable ? "cursor-pointer" : ""}`}
               onClick={() => {
-                if (column.sortable) {
+                if (column.isSortable) {
                   props.onSort(column.key);
                 }
               }}
             >
               {column.header}
-              {column.sortable && props.currentSort === column.key && (
+              {column.isSortable && props.currentSort === column.key && (
                 <>
                   {props.direction === "asc" ? (
                     <ChevronLeftIcon

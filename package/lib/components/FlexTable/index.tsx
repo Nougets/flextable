@@ -8,7 +8,7 @@ type RowColumnData = ComponentProps<typeof FlexTableRow>["columnsData"][string];
 export type FlexTableItemColumn = {
   key: string;
   header: string;
-  sortable?: boolean;
+  isSortable?: boolean;
 } & Partial<RowColumnData>;
 
 type OptionsCallback = (data: object) => void;
@@ -29,7 +29,7 @@ export type FlexTableProps = {
 
 type SortType = "asc" | "desc";
 
-function FlexTable(props: FlexTableProps) {
+export function FlexTable(props: FlexTableProps) {
   const [page, setPage] = useState<number>(0);
   const [currentSort, setCurrentSort] = useState<[string, SortType]>([
     "",
@@ -156,5 +156,3 @@ function FlexTable(props: FlexTableProps) {
     </div>
   );
 }
-
-export default FlexTable;
