@@ -68,7 +68,7 @@ Here's how to quickly get started with FlexTable in your React application:
 
 You can check the examples in the `examples` folder to see how to use FlexTable in different scenarios.
 
-Or check the Storybook examples page: [FlexTable Storybook](https://nouget.github.io/flextable/)
+Or check the Storybook examples page: [FlexTable Storybook](https://examples-flextable.nouget.com/)
 
 ## Documentation
 
