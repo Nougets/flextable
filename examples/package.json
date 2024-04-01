@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nouget/flextable": "^0.0.2-alpha",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -15,13 +15,13 @@ FlexTable is a lightweight, flexible table component designed for React applicat
 Install FlexTable using npm:
 
 ```bash
-npm install @nougets/flextable
+npm install @nouget/flextable
 ```
 
 Or using yarn:
 
 ```bash
-yarn add @nougets/flextable
+yarn add @nouget/flextable
 ```
 
 ## Quick Start
@@ -39,7 +39,7 @@ Here's how to quickly get started with FlexTable in your React application:
 - Import FlexTable in your component:
 
   ```typescript
-  import { FlexTable } from "@nougets/flextable";
+  import { FlexTable } from "@nouget/flextable";
   ```
 
 - Define your columns and data:
