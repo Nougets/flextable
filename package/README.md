@@ -64,6 +64,12 @@ Here's how to quickly get started with FlexTable in your React application:
   <FlexTable columns={columns} data={data} />
   ```
 
+## Examples
+
+You can check the examples in the `examples` folder to see how to use FlexTable in different scenarios.
+
+Or check the Storybook examples page: [FlexTable Storybook](https://nouget.github.io/flextable/)
+
 ## Documentation
 
 For a more detailed guide on FlexTable's API, including how to customize columns, implement sorting and filtering, and more, check out our documentation.
