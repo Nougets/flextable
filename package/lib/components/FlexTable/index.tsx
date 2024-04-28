@@ -124,6 +124,8 @@ export function FlexTable(props: FlexTableProps) {
             />
           ))}
         </div>
+      </div>
+      <div className="w-full">
         {props.enablePagination && (
           <div className="flex w-full select-none flex-col items-center">
             <div className="h-px w-full bg-gray-300"></div>

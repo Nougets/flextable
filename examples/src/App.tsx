@@ -1,6 +1,7 @@
 import { BasicTable } from "./components/BasicTable";
 import { EditableTable } from "./components/EditableTable";
 import { ExpandableTable } from "./components/ExpandableTable";
+import { HorizontalScrollTable } from "./components/HorizontalScrollableTable";
 import { OptionsTable } from "./components/OptionsTable";
 import { SortableTable } from "./components/SortableTable";
 import { TemplateTable } from "./components/TemplateTable";
@@ -30,6 +31,10 @@ const Tables = [
   {
     name: "Template Table",
     component: <TemplateTable />,
+  },
+  {
+    name: "Horizontal Scroll Table",
+    component: <HorizontalScrollTable />,
   },
 ];
 

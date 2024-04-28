@@ -107,6 +107,12 @@ export const Options: Story = {
           alert("Clicked on: " + JSON.stringify(row));
         },
       },
+      {
+        name: "Delete",
+        callback: (row: any) => {
+          alert("Clicked on: " + JSON.stringify(row));
+        },
+      },
     ],
   },
   parameters: {
@@ -145,6 +151,27 @@ export const Sortable: Story = {
   args: {
     columns: data.columnsSortable,
     data: data.data,
+  },
+  parameters: {
+    controls: {
+      exclude: [
+        "expandable",
+        "expandedTemplate",
+        "paginationSize",
+        "enablePagination",
+        "bodyStyle",
+        "options",
+      ],
+    },
+  },
+};
+
+export const HorizonalScroll: Story = {
+  args: {
+    columns: data.columnsHorizontalScroll,
+    data: data.data,
+    enablePagination: true,
+    paginationSize: 5,
   },
   parameters: {
     controls: {

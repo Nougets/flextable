@@ -1,4 +1,4 @@
-import { ComponentProps, useState } from "react";
+import { ComponentProps, useEffect, useRef, useState } from "react";
 import { getPropIfExists } from "./utils";
 import { EllipsisVerticalIcon, MinusIcon, PlusIcon } from "./Icons";
 import EditableField from "./EditableField";
@@ -30,6 +30,7 @@ function FlexTableRow({
 }: FlexTableRowProps) {
   const [expanded, setExpanded] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
+  const optionsRef = useRef<HTMLDivElement>(null);
   const ExpandedTemplate = ({ data }: { data: object }) => {
     if (expandedTemplate) {
       return expandedTemplate(data);
@@ -37,6 +38,23 @@ function FlexTableRow({
 
     return null;
   };
+
+  useEffect(() => {
+    // Disable show options if clicked outside of container
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        optionsRef.current &&
+        !optionsRef.current.contains(event.target as Node)
+      ) {
+        setShowOptions(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div
@@ -121,8 +139,11 @@ function FlexTableRow({
               onClick={() => setShowOptions((state) => !state)}
             />
             {showOptions && (
-              <div className="absolute right-6 z-10 rounded-lg bg-gray-200">
-                <div className="my-2 flex w-full">
+              <div
+                className="absolute right-6 z-10 rounded-lg bg-gray-200"
+                ref={optionsRef}
+              >
+                <div className="my-2 flex flex-col w-full">
                   {options.map((option) => (
                     <div
                       className="w-full cursor-pointer px-4 py-1 font-bold hover:bg-gray-300"
